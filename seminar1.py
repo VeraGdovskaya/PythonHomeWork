@@ -31,6 +31,18 @@ elif (x > 0 and y < 0):
     print(f'x={x}; y={y} -> точка находится в 4-ой четверти')
 
 
+# Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат
+
+def truth_of_the_statement(x, y, z):
+    print(f"¬({x} V {y} V {z}) == ¬{x} ⋀ ¬{y} ⋀ ¬{z}") 
+    return (not (x or y or z)) == (not x and not y and not z)
+for x in range(0, 2):
+    for y in range(0, 2):
+        for z in range(0, 2):
+            print('Truth')
+else:
+    print('False') 
+
 
 # Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
 
